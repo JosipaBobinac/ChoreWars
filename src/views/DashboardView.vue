@@ -1,111 +1,102 @@
 <template>
-  <div class="dashboard">
-    <div class="mobile-page">
-      <header class="top-bar">
-        <div class="logo-circle"></div>
-        <h1>CHORE WARS</h1>
-        <Bell size="22" />
-      </header>
+  <div class="page-content">
+    <header class="top-bar">
+      <div class="logo-circle"></div>
+      <h1>CHORE WARS</h1>
+      <Bell size="22" />
+    </header>
 
-      <main class="content">
-        <p class="small-title">CURRENT SKIRMISH</p>
+    <main class="content">
+      <p class="small-title">CURRENT SKIRMISH</p>
 
-        <section class="skirmish-box">
-          <div class="rings">
-            <div class="outer-ring"></div>
-            <div class="inner-ring"></div>
+      <section class="skirmish-box">
+        <div class="rings">
+          <div class="outer-ring"></div>
+          <div class="inner-ring"></div>
 
-            <div class="xp-center">
-              <h2>VS</h2>
-              <p class="purple-xp">1,450 XP</p>
-              <p class="green-xp">1,120 XP</p>
-            </div>
+          <div class="xp-center">
+            <h2>VS</h2>
+            <p class="purple-xp">1,450 XP</p>
+            <p class="green-xp">1,120 XP</p>
           </div>
+        </div>
 
-          <div class="lead-badge">
-            <Star size="14" fill="#2b1647" />
-            <span>LEAD!</span>
+        <div class="lead-badge">
+          <Star size="14" fill="#2b1647" />
+          <span>LEAD!</span>
+        </div>
+      </section>
+
+      <section class="section-row">
+        <h2>Quick Strike</h2>
+        <RouterLink to="/chores">View All</RouterLink>
+      </section>
+
+      <section class="quick-list">
+        <div class="quick-card">
+          <div class="quick-icon purple-icon">
+            <WashingMachine size="34" />
           </div>
-        </section>
+          <span>LAUNDRY</span>
+        </div>
 
-        <section class="section-row">
-          <h2>Quick Strike</h2>
-          <RouterLink to="/chores">View All</RouterLink>
-        </section>
-
-        <section class="quick-list">
-          <div class="quick-card">
-            <div class="quick-icon purple-icon">
-              <WashingMachine size="34" />
-            </div>
-            <span>LAUNDRY</span>
+        <div class="quick-card">
+          <div class="quick-icon green-icon">
+            <Utensils size="34" />
           </div>
+          <span>DISHES</span>
+        </div>
 
-          <div class="quick-card">
-            <div class="quick-icon green-icon">
-              <Utensils size="34" />
-            </div>
-            <span>DISHES</span>
+        <div class="quick-card">
+          <div class="quick-icon yellow-icon">
+            <Trash2 size="34" />
           </div>
+          <span>TRASH</span>
+        </div>
+      </section>
 
-          <div class="quick-card">
-            <div class="quick-icon yellow-icon">
-              <Trash2 size="34" />
-            </div>
-            <span>TRASH</span>
+      <section class="war-title">
+        <h2>War Log</h2>
+        <button class="floating-button">
+          <Swords size="30" />
+        </button>
+      </section>
+
+      <section class="war-log">
+        <div class="log-card purple-border">
+          <div class="log-avatar purple-icon">
+            <WashingMachine size="30" />
           </div>
-        </section>
-
-        <section class="war-title">
-          <h2>War Log</h2>
-
-          <button class="floating-button">
-            <Swords size="30" />
-          </button>
-        </section>
-
-        <section class="war-log">
-          <div class="log-card purple-border">
-            <div class="log-avatar purple-icon">
-              <WashingMachine size="30" />
-            </div>
-
-            <div class="log-text">
-              <h3>Laundry Mountain</h3>
-              <p>Finished 2 minutes ago</p>
-            </div>
-
-            <span class="log-xp">+50 XP</span>
+          <div class="log-text">
+            <h3>Laundry Mountain</h3>
+            <p>Finished 2 minutes ago</p>
           </div>
+          <span class="log-xp">+50 XP</span>
+        </div>
 
-          <div class="log-card green-border">
-            <div class="log-avatar green-icon">
-              <Utensils size="30" />
-            </div>
-
-            <div class="log-text">
-              <h3>Crystal Clear Victory</h3>
-              <p>Dishes completed successfully</p>
-            </div>
-
-            <span class="log-xp">+80 XP</span>
+        <div class="log-card green-border">
+          <div class="log-avatar green-icon">
+            <Utensils size="30" />
           </div>
-
-          <div class="log-card yellow-border">
-            <div class="log-avatar yellow-icon">
-              <Trash2 size="30" />
-            </div>
-
-            <div class="log-text">
-              <h3>Beast Tamer</h3>
-              <p>Trash taken out successfully</p>
-            </div>
-
-            <span class="log-xp">+40 XP</span>
+          <div class="log-text">
+            <h3>Crystal Clear Victory</h3>
+            <p>Dishes completed successfully</p>
           </div>
-        </section>
-      </main>
-    </div>
+          <span class="log-xp">+80 XP</span>
+        </div>
+
+        <div class="log-card yellow-border">
+          <div class="log-avatar yellow-icon">
+            <Trash2 size="30" />
+          </div>
+          <div class="log-text">
+            <h3>Beast Tamer</h3>
+            <p>Trash taken out successfully</p>
+          </div>
+          <span class="log-xp">+40 XP</span>
+        </div>
+      </section>
+    </main>
   </div>
 </template>
 
@@ -121,7 +112,6 @@ import {
 
 export default {
   name: 'DashboardView',
-
   components: {
     WashingMachine,
     Utensils,
@@ -134,20 +124,11 @@ export default {
 </script>
 
 <style scoped>
-.dashboard {
-  min-height: 100vh;
-  background: #eeeeee;
-  display: flex;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-}
-
-.mobile-page {
-  width: 390px;
+.page-content {
+  width: 100%;
   min-height: 100vh;
   background: #ffffff;
   color: #241238;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
 }
 
 .top-bar {
@@ -213,26 +194,14 @@ export default {
 .outer-ring {
   inset: 0;
   border-radius: 50%;
-  background:
-    conic-gradient(
-      from 220deg,
-      #7b2cff 0deg 210deg,
-      #ece3ff 210deg 360deg
-    );
-
+  background: conic-gradient(from 220deg, #7b2cff 0deg 210deg, #ece3ff 210deg 360deg);
   mask: radial-gradient(circle, transparent 58%, black 60%);
 }
 
 .inner-ring {
   inset: 22px;
   border-radius: 50%;
-  background:
-    conic-gradient(
-      from 220deg,
-      #00a884 0deg 170deg,
-      #e1f7f0 170deg 360deg
-    );
-
+  background: conic-gradient(from 220deg, #00a884 0deg 170deg, #e1f7f0 170deg 360deg);
   mask: radial-gradient(circle, transparent 55%, black 57%);
 }
 
@@ -275,8 +244,6 @@ export default {
   font-weight: 900;
   box-shadow: 0 6px 14px rgba(255, 212, 0, 0.35);
 }
-
-
 
 .section-row {
   display: flex;
