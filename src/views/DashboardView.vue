@@ -110,6 +110,10 @@ import {
   Bell
 } from 'lucide-vue-next'
 
+// test firebase import - RADI
+// import { db } from "@/services/firebase";
+// import { collection, addDoc} from "firebase/firestore";
+
 export default {
   name: 'DashboardView',
   components: {
@@ -120,7 +124,23 @@ export default {
     Star,
     Bell
   }
-}
+  }
+// test firebase export - RADI//
+//   async mounted() {
+//     console.log('Dashboard mounted')
+//     try {
+//       const docRef = await addDoc(collection(db, 'test'), {
+//         name: 'Ivana',
+//         points: 100
+//       })
+
+//       console.log('Document written with ID:', docRef.id)
+//     } catch (e) {
+//       console.error('Error adding document:', e)
+//     }
+//   }
+// }
+
 </script>
 
 <style scoped>
