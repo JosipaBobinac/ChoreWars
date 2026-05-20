@@ -109,11 +109,9 @@ import {
   Star,
   Bell
 } from 'lucide-vue-next'
-
 // test firebase import - RADI
 // import { db } from "@/services/firebase";
 // import { collection, addDoc} from "firebase/firestore";
-
 export default {
   name: 'DashboardView',
   components: {
