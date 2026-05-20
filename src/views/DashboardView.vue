@@ -55,6 +55,10 @@
         </div>
       </section>
 
+      <RouterLink to="/submit-proof" class="proof-link">
+        Open Submit Proof
+      </RouterLink>
+
       <section class="war-title">
         <h2>War Log</h2>
         <button class="floating-button">
@@ -419,5 +423,19 @@ export default {
   font-size: 18px;
   font-weight: 900;
   white-space: nowrap;
+}
+
+.proof-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 54px;
+  margin-bottom: 34px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  box-shadow: 0 12px 24px rgba(123, 44, 255, 0.3);
 }
 </style>
